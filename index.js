@@ -525,48 +525,14 @@ const get = require('got')
             `
       Halo *${id.split("@s.whatsapp.net")[0]}*
       Arti dari namamu adalah
-
   ***********************************
          Nama _*${nama}*_ ${h}
   ***********************************
-
 `,
  MessageType.text);
   });
-  }
-  else if (text.includes("!pasangan ")) {
-    const request = require('request');
-    var gh = text.split("!pasangan ")[1];
-    var namamu = gh.split("&")[0];
-    var pasangan = gh.split("&")[1];
-    request.get({
-        headers: {'content-type' : 'application/x-www-form-urlencoded'},
-        url:     'http://www.primbon.com/kecocokan_nama_pasangan.php?nama1='+ namamu +'&nama2='+ pasangan +'&proses=+Submit%21+',
-
-    },function(error, response, body){
-        let $ = cheerio.load(body);
-      var y = $.html().split('<b>KECOCOKAN JODOH BERDASARKAN NAMA PASANGAN</b><br><br>')[1];
-        var t = y.split('.<br><br>')[1];
-        var f = y.replace(t ," ");
-        var x = f.replace(/<br\s*[\/]?>/gi, "\n");
-        var h  = x.replace(/<[^>]*>?/gm, '');
-        var d = h.replace("&amp;", '&')
-      console.log(""+ d);
-      conn.sendMessage(id, `
-
-************************************
-
- *Kecocokan berdasarkan nama*
-
-
- ${d}
-
-
-************************************
-    `, MessageType.text);
-  });
-  }
-   if (text.includes("!pict cewek"))
+  }   
+if (text.includes("!pict cewek"))
    {
     var items = ["ullzang girl", "cewe cantik", "hijab cantik", "korean girl", "remaja cantik", "cewek korea", "cewek jepang"];
     var cewe = items[Math.floor(Math.random() * items.length)];
