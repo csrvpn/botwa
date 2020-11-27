@@ -143,9 +143,11 @@ else if (text == 'Bro')
 {
 conn.sendMessage(id, tambahan.bro ,MessageType.text);
 }
-else if (text == 'P')
-{
-conn.sendMessage(id, tambahan.p ,MessageType.text);
+else if (text.includes('p')){
+conn.sendMessage(id, 'pa pe pa pe asw' ,MessageType.text);
+}
+else if (text.includes('P')){
+conn.sendMessage(id, 'pa pe pa pe asw' ,MessageType.text);
 }
 else if (text == 'Test')
 {
@@ -158,6 +160,54 @@ conn.sendMessage(id, tambahan.hai ,MessageType.text);
 else if (text == 'ASSALAMUALAIKUM')
 {
 conn.sendMessage(id, tambahan.ass ,MessageType.text);
+}
+else if (text == 'sayang'){
+conn.sendMessage(id, 'apa sayang?' ,MessageType.text);
+}
+else if (text.includes('love u')){
+conn.sendMessage(id, 'love you too' ,MessageType.text);
+}
+else if (text.includes('cuk')){
+conn.sendMessage(id, 'cak cok cak cok asw' ,MessageType.text);
+}
+else if (text.includes('Cuk')){
+conn.sendMessage(id, 'cak cok cak cok asw' ,MessageType.text);
+}
+else if (text.includes('cok')){
+conn.sendMessage(id, 'cak cok cak cok asw' ,MessageType.text);
+}
+else if (text.includes('Cok')){
+conn.sendMessage(id, 'cak cok cak cok asw' ,MessageType.text);
+}
+else if (text.includes('ces')){
+conn.sendMessage(id, 'apa?' ,MessageType.text);
+}
+else if (text.includes('Ces')){
+conn.sendMessage(id, 'apa?' ,MessageType.text);
+}
+else if (text.includes('sar')){
+conn.sendMessage(id, 'apa?' ,MessageType.text);
+}
+else if (text.includes('Sar')){
+conn.sendMessage(id, 'apa?' ,MessageType.text);
+}
+else if (text.includes('oala')){
+conn.sendMessage(id, 'jancok' ,MessageType.text);
+}
+else if (text.includes('Oala')){
+conn.sendMessage(id, 'jancok' ,MessageType.text);
+}
+else if (text.includes('oalah')){
+conn.sendMessage(id, 'jancok' ,MessageType.text);
+}
+else if (text.includes('Oalah')){
+conn.sendMessage(id, 'jancok' ,MessageType.text);
+}
+else if (text.includes('wkwk')){
+conn.sendMessage(id, 'tolol' ,MessageType.text);
+}
+else if (text.includes('Wkwk')){
+conn.sendMessage(id, 'tolol' ,MessageType.text);
 }
 else if (text == 'BRO')
 {
@@ -185,12 +235,18 @@ if (text.includes("!say")){
 conn.sendMessage(id, teks, MessageType.text)
 }
 
-if (text.includes("!nulis")){
-  const teks = text.replace(/!nulis /, "")
-axios.get(`https://salism3.pythonanywhere.com/nulis?text=${teks}&apiKey=zFuV88pxcIiCWuYlwg57`).then((res) => {
-    let hasil = `Silahkan download hasil dibawah ini agar hasilnya lebih bagus! 👌\n\n${res.data.result}`;
-    conn.sendMessage(id, hasil ,MessageType.text);
-})
+if (text.includes('!nulis')){
+  var teks = text.replace(/!nulis /, '')
+    axios.get('https://bangandre.herokuapp.com/nulis?teks='+teks)
+    .then((res) => {
+      imageToBase64(res.data.result)
+        .then(
+          (ress) => {
+            conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
+            var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, buf, MessageType.image)
+        })
+    })
 }
 
 if (text.includes("!ytmp3")){
