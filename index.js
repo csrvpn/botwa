@@ -115,10 +115,6 @@ else if (text == 'bro')
 {
 conn.sendMessage(id, tambahan.bro ,MessageType.text);
 }
-else if (text == 'p')
-{
-conn.sendMessage(id, tambahan.p ,MessageType.text);
-}
 else if (text == 'test')
 {
   conn.sendMessage(id, tambahan.test, MessageType.text);
@@ -143,10 +139,10 @@ else if (text == 'Bro')
 {
 conn.sendMessage(id, tambahan.bro ,MessageType.text);
 }
-else if (text.includes('p')){
+else if (text == 'p'){
 conn.sendMessage(id, 'pa pe pa pe asw' ,MessageType.text);
 }
-else if (text.includes('P')){
+else if (text == 'P'){
 conn.sendMessage(id, 'pa pe pa pe asw' ,MessageType.text);
 }
 else if (text == 'Test')
