@@ -187,6 +187,24 @@ conn.sendMessage(id, 'apa?' ,MessageType.text);
 else if (text.includes('Sar')){
 conn.sendMessage(id, 'apa?' ,MessageType.text);
 }
+else if (text.includes('selamat pagi')){
+conn.sendMessage(id, 'pagi buu' ,MessageType.text);
+}
+else if (text.includes('haha')){
+conn.sendMessage(id, 'sopan kh bgitu' ,MessageType.text);
+}
+else if (text.includes('revita')){
+conn.sendMessage(id, 'podo yoga' ,MessageType.text);
+}
+else if (text.includes('bot')){
+conn.sendMessage(id, 'iya' ,MessageType.text);
+}
+else if (text.includes('yoga')){
+conn.sendMessage(id, 'tolol' ,MessageType.text);
+}
+else if (text.includes('punten')){
+conn.sendMessage(id, 'mangga' ,MessageType.text);
+}
 else if (text.includes('oala')){
 conn.sendMessage(id, 'jancok' ,MessageType.text);
 }
