@@ -13,9 +13,9 @@ const tambahan = require("./lib/tambahan.js")
 const donasi = require("./lib/donasi.js");
 const info = require("./lib/info.js");
 /////////////////
-const BotName = 'CSR BOT☄'; 
+const BotName = 'CSRVPN BOT'; 
 const instagram = 'https://instagram.com/sarangga87_'; 
-const telegram = 'https://t.me/caesaranggaaa'; 
+const telegram = 'https://t.me/csrvpn'; 
 const kapanbotaktif = 'KETIKA HANYA DIAKTIFKAN'; 
 const youtube = 'https://www.youtube.com/-';
 //const grupch1 = 'belum ada grup'; 
