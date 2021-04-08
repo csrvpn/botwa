@@ -1,1 +1,1 @@
-apt update && apt upgrade && install wget && apt install ffmpeg && apt install nodejs && apt install npm && git clone https://github.com/csr87/botwa.git && cd botwa && npm install -g npm@latest && npm install -g cwebp && npm install -g ytdl && npm i && npm i got && node index.js
+apt update && apt upgrade && apt install npm && apt install wget && apt install ffmpeg && apt install nodejs && git clone https://github.com/csr87/botwa.git && cd botwa && npm install -g npm@latest && npm install -g cwebp && npm install -g ytdl && npm i && npm i got && node index.js
