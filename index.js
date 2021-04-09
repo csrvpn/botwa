@@ -687,7 +687,7 @@ if (text.includes("!alay")){
 
 
 
-//AKHIRNYAAAAAAAA
+//AKHIRNYAAAAAAAAA
 
 
 })
