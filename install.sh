@@ -8,4 +8,5 @@ npm audit fix
 npm install -g cwebp
 npm install -g ytdl
 npm i
-npm i got
+npm i got 
+node index.js
